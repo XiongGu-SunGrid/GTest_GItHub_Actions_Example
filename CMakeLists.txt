@@ -5,8 +5,6 @@ project(GTest_GItHub_Actions_Example)  # Replace with your project's name
 set(CMAKE_CXX_STANDARD 17)
 
 include_directories(src)
-include_directories(lib/googletest)
 
 add_subdirectory(src)
 add_subdirectory(tst)
-add_subdirectory(lib/googletest)
