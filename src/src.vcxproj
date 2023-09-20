@@ -139,7 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cal.cpp" />
     <ClCompile Include="src.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cal.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

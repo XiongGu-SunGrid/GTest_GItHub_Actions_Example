@@ -7,6 +7,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "src", "src.vcxproj", "{BDCF
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tst", "..\tst\tst.vcxproj", "{688B400B-08B4-4B95-9819-845534DDECC6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5211FA08-26BD-4969-A49D-3B8396BA5849}"
+	ProjectSection(SolutionItems) = preProject
+		..\CMakeLists.txt = ..\CMakeLists.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64

@@ -1,6 +1,9 @@
 #include "pch.h"
+#include "../src/cal.h"
+#include "../src/cal.cpp"
 
-TEST(TestCaseName, TestName) {
-  EXPECT_EQ(1, 1);
+TEST(TestCal, TestAdd) {
+	Cal calTest;
+  EXPECT_EQ(calTest.add(2,3), 5);
   EXPECT_TRUE(true);
 }
