@@ -1,40 +1,40 @@
-name: Demo Test
+name: Demo Test  #workflow name
 
-on:
+on:              #workflow trigger condition
   push:
     branches:
-      - 'main'
+      - 'main'   #when code is pushed to the main branch, the workflow will be triggered
   pull_request:
     branches:
-      - 'main'
+      - 'main'   #When there is a pull request to merge code to main branch,
+                 #the workflow will be triggered
 
+jobs:                                        # Define your jobs 
+  Test-Google-Test:                          # Name of the job
+    runs-on: ubuntu-latest                   # Run the workflow on ubuntu system
 
-jobs:
-  Test-Google-Test:
-    runs-on: ubuntu-latest
+    steps:                                   # Define steps to be executed
+      - name: Hello Step                     # Step name
+        run: echo "Hello World"              # Command of the step
 
-    steps:
-      - name: Hello Step
-        run: echo "Hello World"
-
-      - name: Checkout code
+      - name: Checkout code                  # Copy the code to VM
         uses: actions/checkout@v4
 
-      - name: Install dependencies
+      - name: Install dependencies           # Install the dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y cmake g++
-          sudo apt-get install libgtest-dev
+          sudo apt-get install -y cmake g++  # Install cmake and g++
+          sudo apt-get install libgtest-dev  # Install google test library
 
 
-      - name: Build the project
-        run: |
-          mkdir build
-          cd build
+      - name: Build the project              # Build the project according
+        run: |                               # the configuration in CMakeLists.txt.
+          mkdir build                        # The symbol "|" allow you to execute 
+          cd build                           # more than one command in a step.
           cmake ..
           make all
 
-      - name: run the tests
-        run: |
-          cd build
+      - name: run the tests                  # Run the tests
+        run: |                               # The command of the executable is defined 
+          cd build                           # in CMakeLists.txt
           ./tst/GTest_GItHub_Actions_Example_tst
