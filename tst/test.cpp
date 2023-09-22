@@ -4,6 +4,6 @@
 
 TEST(TestCal, TestAdd) {
 	Cal calTest;
-  EXPECT_EQ(calTest.add(2,3), 5);
+  EXPECT_EQ(calTest.add(2,3), 6);
   EXPECT_TRUE(true);
 }
